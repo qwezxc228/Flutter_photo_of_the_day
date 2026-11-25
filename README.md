@@ -1,17 +1,27 @@
-# photo_of_the_day_morozov
+# Кролик дня (Rabbit of the Day)
 
-A new Flutter project.
+Приложение на Flutter, которое асинхронно загружает случайные фотографии кроликов. Демонстрирует работу с `Future`, `async/await` и индикатором загрузки.
 
-## Getting Started
+## Автор
 
-This project is a starting point for a Flutter application.
+Морозов Владислав, группа ИСП-243
 
-A few resources to get you started if this is your first Flutter project:
+## Стек и версии
+- Dart 3.x
+- Платформа: Web (Chrome)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Скриншот
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Скриншот приложения](img/step2_Морозов.png)
+
+## Как это работает
+
+При нажатии на кнопку вызывается асинхронный метод `_fetchPhoto()`. Он использует `await Future.delayed()` для имитации сетевой задержки в 2 секунды, показывая пользователю `CircularProgressIndicator`. После задержки выбирается случайное локальное изображение кролика, и UI обновляется через `setState()`.
+
+## Как запустить
+
+```bash
+git clone https://github.com/qwezxc228/Flutter_photo_of_the_day.git
+cd photo_of_the_day_morozov
+flutter pub get
+flutter run -d chrome
